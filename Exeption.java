@@ -49,3 +49,45 @@ class Exeption3{
         System.out.println("Program is running successfully");
     }
 }
+
+class Exeption4{
+    public static void main(String[] args) {
+        int a=10;
+        int b=0;
+        try {
+            System.out.println(a/b);
+        } catch (Exception e) {
+            System.out.println("Cannot divide by zero"+e.getMessage());
+        }
+        finally {
+            System.out.println("finally block is always executed");
+        }
+        System.out.println("Program is running successfully");
+    }
+}
+
+class Exeption5{
+    public static void main(String[] args) {
+        int a = -1;
+        if (a<0) {
+            throw new IllegalArgumentException("Value cannot be negative");
+        }
+        System.out.println("Value is :"+a );
+    }
+}
+
+
+class Exeption6{
+    public static void main(String[] args) {
+        try {
+            
+            methodThatThrowsException();
+        } catch (Exception e) {
+           System.out.println("Caught an exception"+e.getMessage());
+        }
+    }
+
+    public static void methodThatThrowsException() throws Exception {
+        throw new Exception("This is a custom exception message");
+    }
+}
