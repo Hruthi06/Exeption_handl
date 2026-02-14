@@ -35,3 +35,17 @@ class Exeption2{
         System.out.println("Program is running successfully");
     }
 }
+
+
+class Exeption3{
+    public static void main(String[] args) {
+        String s="Hello";
+        try {
+            int num = Integer.parseInt(s);
+            System.out.println(num);
+        } catch (Exception e) {
+            System.out.println("cannot convert string to integer"+e.getMessage());
+        }
+        System.out.println("Program is running successfully");
+    }
+}
