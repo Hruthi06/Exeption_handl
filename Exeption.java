@@ -91,3 +91,49 @@ class Exeption6{
         throw new Exception("This is a custom exception message");
     }
 }
+
+class Exeption7{
+    public static void main(String[] args) {
+        try {
+
+            validateAge(10);
+            
+        } catch (Exception e) {
+            System.out.println("Caught an exception"+e.getMessage());
+        }
+    }
+
+    public static void validateAge(int age) {
+        if (age<18) {
+            throw new IllegalArgumentException("You are not eligible for voting");
+        }
+        System.out.println("You are eligible for voting");
+    }
+}
+
+
+class Exeption8 extends Exception{
+    public Exeption8(String message) {
+        super(message);
+    }
+    
+}
+
+class Exeption9{
+    public static void main(String[] args) {
+        try {
+            
+            methodThatThrowsException();
+        } catch (Exception e) {
+           System.out.println("Caught an exception"+e.getMessage());
+        }
+    }
+
+    public static void methodThatThrowsException() throws Exception {
+        throw new Exception("This is a custom exception message");
+    }
+}
+
+
+
+
